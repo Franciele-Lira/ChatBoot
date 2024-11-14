@@ -1,0 +1,165 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #121212;
+    background-color: #fff;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 1em 2em;
+    background-color: #f0f0f0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    color: #121212;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6347;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #121212;
+}
+
+/* Seção Principal */
+main {
+    margin-top: 80px; /* Para evitar sobreposição com o cabeçalho */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    width: 100%;
+    max-width: 800px;
+}
+
+.intro {
+    max-width: 600px; /* Limita a largura do parágrafo */
+    margin: 1em auto; /* Centraliza o parágrafo na seção */
+    margin-top: 1.5em;
+    line-height: 1.6; /* Melhora a legibilidade com espaçamento entre linhas */
+    font-size: 1.1em; /* Aumenta ligeiramente o tamanho da fonte */
+    color: #333; /* Cor do texto no modo claro */
+}
+
+body.dark .intro {
+    color: #ddd; /* Cor do texto no modo escuro */
+}
+
+
+.section {
+    width: 100%;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1em;
+    text-align: center;
+}
+
+.skill-item {
+    padding: 1em;
+    background-color: #333;
+    margin-top: 1.5em;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    color: #fff;
+}
+
+.skill-item:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #555;
+}
+.social-links {
+    margin-top: 1em; /* Adiciona espaço entre o título e os ícones */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ff6347;
+}
+
+/* Dark Mode */
+body.dark {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark header {
+    background-color: #1c1c1c;
+}
+
+body.dark nav a,
+body.dark #darkModeToggle {
+    color: #fff;
+}
+
+body.dark .skill-item {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark .social-links a {
+    background-color: #555;
+    color: #fff;
+}
